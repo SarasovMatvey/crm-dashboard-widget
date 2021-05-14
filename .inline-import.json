@@ -1,0 +1,10 @@
+{
+	"src": ["src/**/*.js"],
+	"backup": "path/to/backup",
+	"encoding": "utf8",
+	"useVar": true,
+	"extensions": {
+		".html": "utf8",
+		".png": "base64"
+	}
+}
