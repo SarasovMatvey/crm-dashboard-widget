@@ -32,22 +32,15 @@
     "gulp-inject": "^5.0.5",
     "gulp-jsdoc3": "^3.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "inline-import": "^1.2.4",
     "webpack-stream": "^6.1.2"
   },
-  "dependencies": {
-    "bootstrap": "^5.0.0",
-    "gulp-sass-glob": "^1.1.0",
-    "hamburgers": "^1.1.3",
-    "imagemin-pngquant": "^9.0.2",
-    "jquery": "^3.6.0",
-    "jss": "^10.6.0",
-    "swiper": "^6.5.8"
-  },
   "inlineImport": {
-		"src": "src/**/*.js",
-		"extensions": {}
-	}
+    "src": "src/**/*.js",
+    "extensions": {}
+  }
 }
