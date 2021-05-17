@@ -37,10 +37,12 @@
   &__backdrop_visible
     display: block
   &__info-panel
+    overflow: auto
     box-shadow: 0 0 10px -5px #000
     position: fixed
     padding-top: 100px
-    height: 100vh
+    top: 0
+    bottom: 0
     width: var(--crm-info-widget-width)
     background: #143A72
     top: 0
@@ -148,5 +150,15 @@
     text-transform: uppercase
     color: #fff
     padding: 5px 10px
-    border-radius: 5px
+    border-radius: 3px
     cursor: pointer
+  &__table-wrap
+    overflow: auto
+    width: 100%
+  &__table
+    width: 100%
+    white-space: nowrap
+    border-collapse: collapse
+    th, td 
+      border: 1px solid #ccc
+      padding: 5px 10px

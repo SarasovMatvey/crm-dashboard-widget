@@ -87,9 +87,7 @@ class CrmWidgetContactForm {
       <div class="crm-info-widget__contact-form-step">
         <div class="crm-info-widget__form-group">
           <h3 class="crm-info-widget__form-group-title">Дата</h3>
-          <select type="text" class="crm-info-widget__field">
-            <option value="">TEST OPTION</option>
-          </select>
+          <input type="date" class="crm-info-widget__field" />
         </div>
         <div class="crm-info-widget__form-group">
           <h3 class="crm-info-widget__form-group-title">Время</h3>
