@@ -1,10 +1,12 @@
 class CrmWidgetContactForm {
-
   _CONTACT_FORM = null;
 
   init() {
     this._CONTACT_FORM = $.parseHTML(this._body.trim());
     this._CONTACT_FORM = $(this._CONTACT_FORM);
+
+    const pagination = new CrmWidgetPagination(3, 0);
+    this._CONTACT_FORM.append(pagination.init())
 
     return this._CONTACT_FORM;
   }
@@ -31,11 +33,6 @@ class CrmWidgetContactForm {
           </select>
         </div>
       </div>
-      <nav class="crm-info-widget__pagination">
-        <span class="crm-info-widget__pagination-item"></span>
-        <span class="crm-info-widget__pagination-item"></span>
-        <span class="crm-info-widget__pagination-item"></span>
-      </nav>
     </div>
   `;
 }
