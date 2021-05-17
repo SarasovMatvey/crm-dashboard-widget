@@ -37,6 +37,7 @@
   &__backdrop_visible
     display: block
   &__info-panel
+    box-shadow: 0 0 10px -5px #000
     position: fixed
     padding-top: 100px
     height: 100vh
@@ -59,27 +60,30 @@
     padding: 5px 0 5px 25px
     cursor: pointer
     border-bottom: 1px solid #1e53a3
-    border-top: 1px solid #1e53a3
     &:hover
       background: #0f2e5c
   &__tab-body
     max-height: 0
     background: #fff
     position: relative
-    right: 2px
-    box-shadow: inset 10px 0 10px -15px #000
     z-index: 2
     overflow: hidden
     padding: 0 15px
-    &::after
-      content: ''
-      position: absolute
-      height: 100%
-      left: 100%
-      top: 0
-      background: #fff
-      width: 2px
     transition: .1s
   &__tab-body_active
     padding: 35px 15px
     max-height: max-content
+  &__form-group
+    margin-bottom: 15px
+  &__form-group-title
+    font-size: 16px
+    margin: 0
+    margin-bottom: 5px
+  &__field
+    width: 100%
+    padding: 3px
+    border-radius: 3px
+    background: none
+
+    
+  

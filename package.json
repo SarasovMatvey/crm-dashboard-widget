@@ -42,5 +42,8 @@
   "inlineImport": {
     "src": "src/**/*.js",
     "extensions": {}
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }

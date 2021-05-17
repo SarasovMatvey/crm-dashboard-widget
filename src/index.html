@@ -10,8 +10,9 @@
     <h1 style="color: red; position: absolute; z-index: 5">123123</h1>
     <script src="./js/main.js"></script>
     <script>
-      const widget = new CrmWidget();
-      widget.init();
+      const widget = new CrmWidget().init();
+      console.log(widget);
+      $('body').prepend(widget);
     </script>
   </body>
 </html>
