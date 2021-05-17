@@ -24,16 +24,17 @@ class CrmWidgetPagination {
   next() {
     if (this._position + 1 > this._dotsCoutn - 1) return;
     this.resetActive();
-    this.setPosition(++this._position);
+    this.setPosition(this._position + 1);
   }
 
   prev() {
     if (this._position - 1 < 0) return;
     this.resetActive();
-    this.setPosition(--this._position);
+    this.setPosition(this._position - 1);
   }
 
   setPosition(position) {
+    if (position > this._dotsCoutn - 1 || position < 0) return;
     this._position = position;
 
     $(
@@ -42,7 +43,9 @@ class CrmWidgetPagination {
   }
 
   resetActive() {
-    this._PAGINATION.find('.crm-info-widget__pagination-item').removeClass('crm-info-widget__pagination-item_active');
+    this._PAGINATION
+      .find(".crm-info-widget__pagination-item")
+      .removeClass("crm-info-widget__pagination-item_active");
   }
 
   _body = `

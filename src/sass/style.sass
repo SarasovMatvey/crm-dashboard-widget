@@ -82,8 +82,10 @@
   &__field
     width: 100%
     padding: 3px
+    border: 1px solid #000
     border-radius: 3px
     background: none
+    box-sizing: border-box
   &__pagination
     margin-top: 20px
     text-align: center
@@ -98,6 +100,53 @@
       margin-right: 0
   &__pagination-item_active
     background: #0f2e5c
-  
-    
-  
+  &__navigation
+    margin-top: -20px
+    display: flex
+    justify-content: space-between
+  &__navigation-btn
+    width: 20px 
+    height: 20px
+    background: #0f2e5c
+    border-radius: 50%
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    border: none
+    cursor: pointer
+    position: relative
+  &__navigation-btn_prev
+    &:after  
+      content: ''
+      background: url('../img/icons/chevron-left.svg') center/contain no-repeat
+      width: 20px
+      height: 20px
+  &__navigation-btn_next
+    &:after  
+      content: ''
+      background: url('../img/icons/chevron-right.svg') center/contain no-repeat
+      width: 20px
+      height: 20px
+  &__contact-form-step
+    display: none
+  &__contact-form-step_active
+    display: block
+  &__result-info-title
+    font-size: 20px 
+    margin: 0
+    margin-bottom: 10px
+  &__result-info-items
+    margin: 0
+    padding: 0
+    list-style: none
+  &__result-info-item
+    margin-bottom: 3px
+  &__confirm-btn
+    background: #198754
+    border: none
+    text-transform: uppercase
+    color: #fff
+    padding: 5px 10px
+    border-radius: 5px
+    cursor: pointer
