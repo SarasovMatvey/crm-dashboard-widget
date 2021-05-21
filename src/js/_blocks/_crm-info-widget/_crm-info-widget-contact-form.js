@@ -63,62 +63,71 @@ class CrmWidgetContactForm {
   }
 
   _body = `
-    <div class="crm-info-widget__contact-form">
-      <div class="crm-info-widget__contact-form-step">
-        <div class="crm-info-widget__form-group">
-          <h3 class="crm-info-widget__form-group-title">Филиал</h3>
-          <select type="text" class="crm-info-widget__field">
-            <option value="">TEST OPTION</option>
-          </select>
-        </div>
-        <div class="crm-info-widget__form-group">
-          <h3 class="crm-info-widget__form-group-title">Услуга</h3>
-          <select type="text" class="crm-info-widget__field">
-            <option value="">TEST OPTION</option>
-          </select>
-        </div>
-        <div class="crm-info-widget__form-group">
-          <h3 class="crm-info-widget__form-group-title">Исполнитель</h3>
-          <select type="text" class="crm-info-widget__field">
-            <option value="">TEST OPTION</option>
-          </select>
-        </div>
+  <div class="crm-info-widget__contact-form">
+    <div class="crm-info-widget__contact-form-step">
+      <div class="crm-info-widget__form-group">
+        <h3 class="crm-info-widget__form-group-title">Филиал</h3>
+        <select type="text" class="crm-info-widget__field">
+          <option value="">TEST OPTION</option>
+        </select>
       </div>
-      <div class="crm-info-widget__contact-form-step">
-        <div class="crm-info-widget__form-group">
-          <h3 class="crm-info-widget__form-group-title">Дата</h3>
-          <input type="date" class="crm-info-widget__field" />
-        </div>
-        <div class="crm-info-widget__form-group">
-          <h3 class="crm-info-widget__form-group-title">Время</h3>
-          <select type="text" class="crm-info-widget__field">
-            <option value="">13:10</option>
-            <option value="">13:10</option>
-            <option value="">13:10</option>
-            <option value="">13:10</option>
-          </select>
-        </div>
+      <div class="crm-info-widget__form-group">
+        <h3 class="crm-info-widget__form-group-title">Услуга</h3>
+        <select type="text" class="crm-info-widget__field">
+          <option value="">TEST OPTION</option>
+        </select>
       </div>
-      <div class="crm-info-widget__contact-form-step">
+      <div class="crm-info-widget__form-group">
+        <h3 class="crm-info-widget__form-group-title">Исполнитель</h3>
+        <select type="text" class="crm-info-widget__field">
+          <option value="">TEST OPTION</option>
+        </select>
+      </div>
+    </div>
+    <div class="crm-info-widget__contact-form-step">
+      <div class="crm-info-widget__form-group">
+        <h3 class="crm-info-widget__form-group-title">Дата</h3>
+        <input type="date" class="crm-info-widget__field" />
+      </div>
+      <div class="crm-info-widget__form-group">
+        <h3 class="crm-info-widget__form-group-title">Время</h3>
+        <select type="text" class="crm-info-widget__field">
+          <option value="">13:10</option>
+          <option value="">13:10</option>
+          <option value="">13:10</option>
+          <option value="">13:10</option>
+        </select>
+      </div>
+    </div>
+    <div class="crm-info-widget__contact-form-step">
+      <div class="crm-info-widget__result-info-wrap">
         <div class="crm-info-widget__form-group">
           <div class="crm-info-widget__result-info">
             <h3 class="crm-info-widget__result-info-title">Назначение</h3>
             <ul class="crm-info-widget__result-info-items">
               <li class="crm-info-widget__result-info-item">
                 <span class="crm-info-widget__result-info-item-key">Услуга:</span>
-                <span class="crm-info-widget__result-info-item-value">Медицинский педикюр</span>
+                <span class="crm-info-widget__result-info-item-value">
+                  Медицинский педикюр
+                </span>
               </li>
               <li class="crm-info-widget__result-info-item">
                 <span class="crm-info-widget__result-info-item-key">Услуга:</span>
-                <span class="crm-info-widget__result-info-item-value">Медицинский педикюр</span>
+                <span class="crm-info-widget__result-info-item-value">
+                  Медицинский педикюр
+                </span>
               </li>
               <li class="crm-info-widget__result-info-item">
                 <span class="crm-info-widget__result-info-item-key">Услуга:</span>
-                <span class="crm-info-widget__result-info-item-value">Медицинский педикюр</span>
+                <span class="crm-info-widget__result-info-item-value">
+                  Медицинский педикюр
+                </span>
               </li>
               <li class="crm-info-widget__result-info-item">
                 <span class="crm-info-widget__result-info-item-key">Услуга:</span>
-                <span class="crm-info-widget__result-info-item-value">Медицинский педикюр</span>
+                <span class="crm-info-widget__result-info-item-value">
+                  Медицинский педикюр
+                </span>
               </li>
             </ul>
           </div>
@@ -128,24 +137,37 @@ class CrmWidgetContactForm {
             <h3 class="crm-info-widget__result-info-title">Заказчик</h3>
             <ul class="crm-info-widget__result-info-items">
               <li class="crm-info-widget__result-info-item">
-                <span class="crm-info-widget__result-info-item-key">Заказчик:</span>
-                <span class="crm-info-widget__result-info-item-value">искендер нурбаев</span>
+                <span class="crm-info-widget__result-info-item-key">
+                  Заказчик:
+                </span>
+                <span class="crm-info-widget__result-info-item-value">
+                  искендер нурбаев
+                </span>
               </li>
               <li class="crm-info-widget__result-info-item">
-                <span class="crm-info-widget__result-info-item-key">Заказчик:</span>
-                <span class="crm-info-widget__result-info-item-value">искендер нурбаев</span>
+                <span class="crm-info-widget__result-info-item-key">
+                  Заказчик:
+                </span>
+                <span class="crm-info-widget__result-info-item-value">
+                  искендер нурбаев
+                </span>
               </li>
               <li class="crm-info-widget__result-info-item">
-                <span class="crm-info-widget__result-info-item-key">Заказчик:</span>
-                <span class="crm-info-widget__result-info-item-value">искендер нурбаев</span>
+                <span class="crm-info-widget__result-info-item-key">
+                  Заказчик:
+                </span>
+                <span class="crm-info-widget__result-info-item-value">
+                  искендер нурбаев
+                </span>
               </li>
             </ul>
           </div>
         </div>
-        <div class="crm-info-widget__form-group">
-          <button class="crm-info-widget__confirm-btn">Подтвердить</button>
-        </div>
+      </div>
+      <div class="crm-info-widget__form-group">
+        <button class="crm-info-widget__confirm-btn">Подтвердить</button>
       </div>
     </div>
-  `;
+  </div>
+`;
 }
