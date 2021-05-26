@@ -61,7 +61,7 @@ class CrmWidgetContactForm {
 
   _body = `
   <div class="crm-info-widget__contact-form">
-    <div class="crm-info-widget__contact-form-step">
+    <div id="crm-info-widget__form-filials" class="crm-info-widget__contact-form-step">
       <div class="crm-info-widget__form-group">
         <h3 class="crm-info-widget__form-group-title">Филиал</h3>
         <select type="text" class="crm-info-widget__field">
@@ -81,7 +81,7 @@ class CrmWidgetContactForm {
         </select>
       </div>
     </div>
-    <div class="crm-info-widget__contact-form-step">
+    <div id="crm-info-widget__form-time" class="crm-info-widget__contact-form-step">
       <div class="crm-info-widget__form-group">
         <h3 class="crm-info-widget__form-group-title">Дата</h3>
         <input type="date" class="crm-info-widget__field" />
@@ -96,7 +96,7 @@ class CrmWidgetContactForm {
         </select>
       </div>
     </div>
-    <div class="crm-info-widget__contact-form-step">
+    <div id="crm-info-widget__form-result" class="crm-info-widget__contact-form-step">
       <div class="crm-info-widget__result-info-wrap">
         <div class="crm-info-widget__form-group">
           <div class="crm-info-widget__result-info">
