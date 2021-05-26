@@ -1,6 +1,6 @@
 class CrmWidgetHistoryTable {
   _TABLE = null;
-  _headers = ["Статус", "Тип действия", "Ответственный"];
+  _headers = ["Статус", "Тип действия", "Специалист"];
   _info = null;
 
   init() {

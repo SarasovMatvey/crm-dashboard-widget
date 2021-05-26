@@ -22,6 +22,22 @@ class CrmWidgetInfoPanel {
       .find("#crm-info-widget__payments")
       .append(new CrmWidgetPaymentsTable().init());
 
+    const telField = this._INFO_PANEL.find(".crm-info-widget__tel-field");
+    $.mask.definitions["9"] = "";
+    $.mask.definitions["n"] = "[0-9]";
+    telField.mask("+996(nnn)nn-nn-nn");
+
+    this._INFO_PANEL
+      .find(".crm-info-widget__sign-up-toggle")
+      .on("click", () => {
+        this._INFO_PANEL
+          .find(".crm-info-widget__auth-form")
+          .toggleClass("active");
+        this._INFO_PANEL
+          .find(".crm-info-widget__sign-up-form")
+          .toggleClass("active");
+      });
+
     return this._INFO_PANEL;
   }
 
@@ -64,11 +80,43 @@ class CrmWidgetInfoPanel {
           <h2 class="crm-info-widget__tab-title">Оплаты</h2>
           <div class="crm-info-widget__tab-body">
             <div  id="crm-info-widget__payments" class="crm-info-widget__table-wrap">
-         
             </div>
         </div>
         </li>
       </ul>
+      <div class="crm-info-widget__auth">
+        <div class="crm-info-widget__auth-form active">
+          <div class="crm-info-widget__form-group">
+            <h3 class="crm-info-widget__form-group-title">Телефон</h3>
+            <input type="text" class="crm-info-widget__field crm-info-widget__tel-field" />
+          </div>
+        </div>
+        <div class="crm-info-widget__sign-up-form">
+          <div class="crm-info-widget__form-group">
+            <h3 class="crm-info-widget__form-group-title">Телефон</h3>
+            <input type="text" class="crm-info-widget__field crm-info-widget__tel-field" />
+          </div>
+          <div class="crm-info-widget__form-group">
+            <h3 class="crm-info-widget__form-group-title">Имя</h3>
+            <input type="text" class="crm-info-widget__field" />
+          </div>
+          <div class="crm-info-widget__form-group">
+            <h3 class="crm-info-widget__form-group-title">Фамилия</h3>
+            <input type="text" class="crm-info-widget__field" />
+          </div>
+          <div class="crm-info-widget__form-group">
+            <h3 class="crm-info-widget__form-group-title">Емейл</h3>
+            <input type="text" class="crm-info-widget__field" />
+          </div>
+        </div>
+        <div class="crm-info-widget__auth-btns">
+          <button class="crm-info-widget__send-sms">Отправить СМС</button>
+          <button class="crm-info-widget__sign-up-toggle">Зарегестрироваться</button>
+        </div>
+        <p>
+          Пожалуйста, войдите, чтобы получить больше информации.
+        </p>
+      </div>  
       <small class="crm-info-widget__copy">Powered by CRM TECHNOLOGIES</small>
     </aside>
   `;

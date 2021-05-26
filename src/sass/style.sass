@@ -58,7 +58,7 @@
     left: calc(100% - var(--crm-info-widget-width))
   &__tabs
     list-style: none
-    padding: 0
+    padding: 20px 0
     margin: 0
   &__tab-title
     margin: 0
@@ -178,6 +178,32 @@
     padding-top: 25px
     text-align: center
     color: #fff
+  &__auth
+    background: #fff
+    padding: 45px 25px
+    margin: auto 0
+    input 
+      margin-bottom: 10px
+  &__auth-btns
+    display: flex
+    @media screen and ( max-width: 650px )
+      flex-direction: column
+      gap: 10px
+  &__send-sms
+    margin-right: 5px
+  &__auth-form
+    display: none
+  &__sign-up-form
+    display: none
+  &__auth-form.active
+    display: block
+  &__sign-up-form.active
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 20px
+    @media screen and ( max-width: 785px )
+      grid-template-columns: 1fr 
+
 
 .crm-info-widget__contact-form-step_active#crm-info-widget__form-filials 
   display: grid !important
