@@ -5,16 +5,13 @@ class CrmWidgetContactForm {
 
   _CONTACT_FORM = null;
   _stepsCount = null;
+  _filialsInfo = null;
 
   init() {
     this._CONTACT_FORM = $.parseHTML(this._body.trim());
     this._CONTACT_FORM = $(this._CONTACT_FORM);
 
-    console.log(
-      "a",
-      $(this._CONTACT_FORM.find(".crm-info-widget__datepicker")[0])
-    );
-    // this._CONTACT_FORM.find(".crm-info-widget__datepicker").datepicker();
+    fetch("http://localhost/rest/attachments").then(resp => resp.json()).then(data => this_filials);
     this._stepsCount = this._CONTACT_FORM.find(
       ".crm-info-widget__contact-form-step"
     ).length;

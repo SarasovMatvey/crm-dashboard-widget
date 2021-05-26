@@ -1,14 +1,26 @@
-class CrmWidgetTable {
-  constructor(headers, info) {
-    this._headers = headers;
-    this._info = info;
-  }
-
+class CrmWidgetHistoryTable {
   _TABLE = null;
+  _headers = ["Статус", "Тип действия", "Ответственный"];
+  _info = null;
 
   init() {
     this._TABLE = $.parseHTML(this._body.trim());
     this._TABLE = $(this._TABLE);
+
+    fetch("http://localhost/rest/history")
+      .then((resp) => {
+        if (resp.ok) return resp.json();
+      })
+      .then((data) => {
+        const tableBody = data["data"].map((value) => [
+          value["subject"],
+          value["activitytype"],
+          value["owner_first_name"] + " " + value["owner_last_name"],
+        ]);
+        this.setTableBody(tableBody);
+      });
+
+    this.setHeaders(this._headers);
 
     return this._TABLE;
   }

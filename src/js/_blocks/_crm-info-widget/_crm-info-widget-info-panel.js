@@ -12,6 +12,16 @@ class CrmWidgetInfoPanel {
       .find("#crm-ifno-widget__contact-form-tab .crm-info-widget__tab-body")
       .append(new CrmWidgetContactForm().init());
 
+    this._INFO_PANEL
+      .find("#crm-info-widget__history")
+      .append(new CrmWidgetHistoryTable().init());
+    this._INFO_PANEL
+      .find("#crm-info-widget__files")
+      .append(new CrmWidgetFilesTable().init());
+    this._INFO_PANEL
+      .find("#crm-info-widget__payments")
+      .append(new CrmWidgetPaymentsTable().init());
+
     return this._INFO_PANEL;
   }
 
@@ -39,230 +49,27 @@ class CrmWidgetInfoPanel {
         </li>
         <li class="crm-info-widget__tab">
           <h2 class="crm-info-widget__tab-title">История визитов</h2>
-          <div class="crm-info-widget__tab-body">
-            <div class="crm-info-widget__table-wrap">
-              <table class="crm-info-widget__table">
-                <thead class="crm-info-widget__header">
-                  <tr class="crm-info-widget__row">
-                    <th>Статус</th>
-                    <th>Тип действия</th>
-                    <th>Тема</th>
-                    <th>В связи с</th>
-                    <th>Дата и время начала</th>
-                    <th>Дата выполнения</th>
-                    <th>Ответственный</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="crm-info-widget__row">
-                    <td>Запланировано</td>
-                    <td>Визит</td>
-                    <td>sdfsdf</td>
-                    <td></td>
-                    <td>06-05-2021 09:30:00</td>
-                    <td>08-05-2021 09:15:00</td>
-                    <td>Улан</td>
-                  </tr>
-                  <tr class="crm-info-widget__row">
-                    <td>Запланировано</td>
-                    <td>Визит</td>
-                    <td>sdfsdf</td>
-                    <td></td>
-                    <td>06-05-2021 09:30:00</td>
-                    <td>08-05-2021 09:15:00</td>
-                    <td>Улан</td>
-                  </tr>
-                  <tr class="crm-info-widget__row">
-                    <td>Запланировано</td>
-                    <td>Визит</td>
-                    <td>sdfsdf</td>
-                    <td></td>
-                    <td>06-05-2021 09:30:00</td>
-                    <td>08-05-2021 09:15:00</td>
-                    <td>Улан</td>
-                  </tr>
-                  <tr class="crm-info-widget__row">
-                    <td>Запланировано</td>
-                    <td>Визит</td>
-                    <td>sdfsdf</td>
-                    <td></td>
-                    <td>06-05-2021 09:30:00</td>
-                    <td>08-05-2021 09:15:00</td>
-                    <td>Улан</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div id="crm-info-widget__history" class="crm-info-widget__tab-body">
+            
           </div>
         </li>
         <li class="crm-info-widget__tab">
           <h2 class="crm-info-widget__tab-title">Файлы</h2>
-          <div class="crm-info-widget__tab-body"><div class="crm-info-widget__table-wrap">
-          <table class="crm-info-widget__table">
-            <thead class="crm-info-widget__header">
-              <tr class="crm-info-widget__row">
-                <th>Статус</th>
-                <th>Тип действия</th>
-                <th>Тема</th>
-                <th>В связи с</th>
-                <th>Дата и время начала</th>
-                <th>Дата выполнения</th>
-                <th>Ответственный</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="crm-info-widget__tab-body">
+            <div id="crm-info-widget__files" class="crm-info-widget__table-wrap">
+            </div>
         </div>
         </li>
         <li class="crm-info-widget__tab">
           <h2 class="crm-info-widget__tab-title">Оплаты</h2>
-          <div class="crm-info-widget__tab-body"><div class="crm-info-widget__table-wrap">
-          <table class="crm-info-widget__table">
-            <thead class="crm-info-widget__header">
-              <tr class="crm-info-widget__row">
-                <th>Статус</th>
-                <th>Тип действия</th>
-                <th>Тема</th>
-                <th>В связи с</th>
-                <th>Дата и время начала</th>
-                <th>Дата выполнения</th>
-                <th>Ответственный</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-              <tr class="crm-info-widget__row">
-                <td>Запланировано</td>
-                <td>Визит</td>
-                <td>sdfsdf</td>
-                <td></td>
-                <td>06-05-2021 09:30:00</td>
-                <td>08-05-2021 09:15:00</td>
-                <td>Улан</td>
-              </tr>
-            </tbody>
-          </table>
-        </div></div>
+          <div class="crm-info-widget__tab-body">
+            <div  id="crm-info-widget__payments" class="crm-info-widget__table-wrap">
+         
+            </div>
+        </div>
         </li>
       </ul>
+      <small class="crm-info-widget__copy">Powered by CRM TECHNOLOGIES</small>
     </aside>
   `;
 }

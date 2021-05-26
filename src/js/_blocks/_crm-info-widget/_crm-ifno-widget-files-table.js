@@ -1,14 +1,25 @@
-class CrmWidgetTable {
-  constructor(headers, info) {
-    this._headers = headers;
-    this._info = info;
-  }
-
+class CrmWidgetFilesTable {
   _TABLE = null;
+  _headers = ["Имя"];
+  _info = null;
 
   init() {
     this._TABLE = $.parseHTML(this._body.trim());
     this._TABLE = $(this._TABLE);
+
+    fetch("http://localhost/rest/attachments")
+      .then((resp) => {
+        if (resp.ok) return resp.json();
+      })
+      .then((data) => {
+        const tableBody = data["data"].map((value) => ({
+          id: value["attachmentsid"],
+          name: value["name"],
+        }));
+        this.setTableBody(tableBody);
+      });
+
+    this.setHeaders(this._headers);
 
     return this._TABLE;
   }
@@ -22,11 +33,13 @@ class CrmWidgetTable {
   }
 
   setTableBody(info) {
+    console.log(info);
+
     for (const infoRow of info) {
       const row = $('<tr class="crm-info-widget__row"></tr>');
-      for (const infoItem of infoRow) {
-        row.append(`<td>${infoItem}</td>`);
-      }
+      row.append(
+        `<td><a href="http://localhost/rest/files/${infoRow["id"]}">${infoRow["name"]}</a></td>`
+      );
       this._TABLE.find("tbody").append(row);
     }
   }

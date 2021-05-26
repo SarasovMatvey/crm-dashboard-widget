@@ -1,14 +1,25 @@
-class CrmWidgetTable {
-  constructor(headers, info) {
-    this._headers = headers;
-    this._info = info;
-  }
-
+class CrmWidgetPaymentsTable {
   _TABLE = null;
+  _headers = ["Тип платежа", "Сумма"];
+  _info = null;
 
   init() {
     this._TABLE = $.parseHTML(this._body.trim());
     this._TABLE = $(this._TABLE);
+
+    fetch("http://localhost/rest/payments")
+      .then((resp) => {
+        if (resp.ok) return resp.json();
+      })
+      .then((data) => {
+        const tableBody = data["data"].map((value) => [
+          value["pay_type"],
+          value["amount"],
+        ]);
+        this.setTableBody(tableBody);
+      });
+
+    this.setHeaders(this._headers);
 
     return this._TABLE;
   }
